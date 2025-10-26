@@ -1,3 +1,23 @@
-/Lab4/nbproject/private/
-/Lab4/build/
-/Lab4/dist/
+# Ignore NetBeans build and output folders for all Labs
+**/build/
+**/dist/
+**/nbproject/private/
+**/nbbuild/
+
+# Ignore generated properties files
+**/nbproject/genfiles.properties
+**/nbproject/project.properties
+**/nbproject/private/config.properties
+
+# Ignore compiled Java class files
+**/*.class
+
+# Ignore JAR, WAR, EAR files
+**/*.jar
+**/*.war
+**/*.ear
+
+# Ignore macOS system files
+.DS_Store
+
+
