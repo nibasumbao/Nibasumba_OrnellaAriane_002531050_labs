@@ -8,7 +8,6 @@ package Business;
 
 import Business.Person.Person;
 import Business.Person.PersonDirectory;
-
 import Business.Profiles.EmployeeDirectory;
 import Business.Profiles.EmployeeProfile;
 import Business.Profiles.StudentDirectory;
@@ -45,6 +44,7 @@ class ConfigureABusiness {
         Person person010 = persondirectory.newPerson("Professor Elaine White");
         
 // Create Admins to manage the business
+        
         EmployeeDirectory employeedirectory = business.getEmployeeDirectory();
         EmployeeProfile employeeprofile0 = employeedirectory.newEmployeeProfile(person001);
         
@@ -56,6 +56,7 @@ class ConfigureABusiness {
         
    
 // Create User accounts that link to specific profiles
+        
         UserAccountDirectory uadirectory = business.getUserAccountDirectory();
         UserAccount ua3 = uadirectory.newUserAccount(employeeprofile0, "admin", "****"); /// order products for one of the customers and performed by a sales person
         UserAccount ua4 = uadirectory.newUserAccount(studentprofile0, "adam", "****"); /// order products for one of the customers and performed by a sales person
