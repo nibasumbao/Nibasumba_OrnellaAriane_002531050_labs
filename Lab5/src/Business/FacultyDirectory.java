@@ -13,6 +13,7 @@ import java.util.ArrayList;
 public class FacultyDirectory {
     private ArrayList<FacultyProfile> facultyList;
 
+    
     public FacultyDirectory() {
         facultyList = new ArrayList<>();
     }
@@ -25,5 +26,5 @@ public class FacultyDirectory {
         FacultyProfile fp = new FacultyProfile(p);
         facultyList.add(fp);
         return fp;
-    }
+    }   
 }

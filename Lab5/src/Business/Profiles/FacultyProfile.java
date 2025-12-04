@@ -14,6 +14,7 @@ public class FacultyProfile extends Profile {
         super(p);
     }
 
+    
     @Override
     public String getRole() {
         return "Faculty";
