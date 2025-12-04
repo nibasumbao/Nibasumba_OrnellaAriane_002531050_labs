@@ -80,14 +80,13 @@ public class StudentSignUpJPanel extends javax.swing.JPanel {
                     .addComponent(txtPassword, javax.swing.GroupLayout.DEFAULT_SIZE, 134, Short.MAX_VALUE))
                 .addGap(28, 28, 28))
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(131, 131, 131)
-                        .addComponent(btnCreateAccount, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(167, 167, 167)
-                        .addComponent(lblTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(167, 167, 167)
+                .addComponent(lblTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(50, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnCreateAccount, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(45, 45, 45))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -122,19 +121,19 @@ public class StudentSignUpJPanel extends javax.swing.JPanel {
         // 1. Create Person
         Person person = business.getPersonDirectory().newPerson(fullName);
 
-    // 2. Create Student Profile
+        // 2. Create Student Profile
         StudentProfile sp  = business.getStudentDirectory().newStudentProfile(person);
 
-    // 3. Create User Account
-    business.getUserAccountDirectory().newUserAccount(sp, username, password);
+        // 3. Create User Account
+        business.getUserAccountDirectory().newUserAccount(sp, username, password);
 
-    // 4. Show success
-    javax.swing.JOptionPane.showMessageDialog(this,"Account created successfully! Please login.");
+        // 4. Show success
+        javax.swing.JOptionPane.showMessageDialog(this,"Account created successfully! Please login.");
 
-    // 5. Navigate back to Login screen
-    cardSequencePanel.removeAll();
-    cardSequencePanel.add("login", new JLabel("Return to login on the left →"));
-    ((java.awt.CardLayout) cardSequencePanel.getLayout()).next(cardSequencePanel);
+        // 5. Navigate back to Login screen
+        cardSequencePanel.removeAll();
+        cardSequencePanel.add("login", new JLabel("Return to login on the left →"));
+        ((java.awt.CardLayout) cardSequencePanel.getLayout()).next(cardSequencePanel);
 
     }//GEN-LAST:event_btnCreateAccountActionPerformed
 
